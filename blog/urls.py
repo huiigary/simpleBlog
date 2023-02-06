@@ -5,7 +5,7 @@ from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView,
 
 urlpatterns = [
     # path('', views.home, name='blog-home'),  # Default path.
-    # video 10 using class view....as_view() method converts the class to a view
+    #  using class view....as_view() method converts the class to a view
     path('', PostListView.as_view(), name='blog-home'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),

@@ -128,10 +128,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # I added this to use this bootstrap version for the crispy form
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-# video 7 - This is the named URL pattern after login when the loginView doesnt get a next GET parameter
+# This is the named URL pattern after login when the loginView doesnt get a next GET parameter
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'  # video 7 @28mins - This is the name URL pattern the user will be redirected when using @login_required()
 
-# video 8- Directory where we want Django to store uploaded files
+#  Directory where we want Django to store uploaded files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'  # Is how we access the pic in the URL

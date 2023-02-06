@@ -36,6 +36,7 @@ class PostListView(ListView):
     context_object_name = 'posts'
     # order by "date_posted" attribute of a Post. "-date_posted" makes it newest --> oldests
     ordering = ['-date_posted']
+    paginate_by = 5
 
 
 # Note1: This is different from "PostListView" because we followed the expected Django formatting hence write fewer lines
@@ -74,6 +75,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/'
+
     def test_func(self):     # test_func --> Ensures current user is same as the post
         post = self.get_object()
         if self.request.user == post.author:
